@@ -1,0 +1,56 @@
+name: Deploy Site
+
+# 构建站点并推送到 visual-e2e.github.io（客户端发版 dispatch / 手动触发）
+on:
+  repository_dispatch:
+    types: [release-published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Product release tag, e.g. v1.0.0 (empty = latest)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+env:
+  PRODUCT_REPO: visual-e2e/visual-e2e-test
+  VITE_BASE: /
+  PAGES_REPO: visual-e2e/visual-e2e.github.io
+  PAGES_BRANCH: master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate downloads manifest
+        env:
+          VERSION: ${{ github.event.client_payload.version || inputs.version }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-downloads.mjs
+
+      - name: Build site
+        env:
+          VITE_BASE: /
+        run: npm run build
+
+      - name: Push to Pages repository
+        env:
+          PAGES_DEPLOY_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          DEPLOY_VERSION: ${{ github.event.client_payload.version || inputs.version || github.sha }}
+        run: node scripts/sync-pages.mjs
