@@ -56,7 +56,15 @@ npm run release          # 创建版本分支
 npm run pub              # 发布版本并更新 https://visual-e2e.github.io
 ```
 
-客户端发布新版本后，官网下载链接也会随之更新。
+## 客户端发新版后
+
+`visual-e2e-test` 发布新 Release（含安装包）后，在本仓库 `master` 执行：
+
+```bash
+npm run build:site && npm run sync:pages
+```
+
+会拉取最新下载链接并更新官网，无需 bump 本站版本。
 
 ## 相关仓库
 
