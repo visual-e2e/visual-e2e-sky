@@ -32,17 +32,29 @@ export const FEATURES = [
     description: "HTML 报告、截图预览与 WebM 整次运行录屏。",
   },
   {
+    title: "浏览器环境",
+    description: "自动检测本机浏览器，也可一键安装或手动选择 Chrome / Chromium。",
+  },
+  {
+    title: "工具箱",
+    description: "内置图片批量重命名，并支持添加、编辑和打开本地自定义工具。",
+  },
+  {
     title: "多项目管理",
     description: "按 projects/{id} 隔离业务项目与运行数据。",
   },
   {
     title: "桌面客户端",
-    description: "Electron 本地运行，用户数据目录独立持久化。",
+    description: "Electron 本地运行，功能页面按需加载，用户数据独立持久化。",
   },
 ] as const;
 
 export const STEPS = [
-  { step: "1", title: "安装客户端", description: "下载并安装 macOS 或 Windows 桌面版。" },
+  {
+    step: "1",
+    title: "安装与配置",
+    description: "安装桌面版，并检测、安装或手动选择 Chrome / Chromium。",
+  },
   { step: "2", title: "创建项目", description: "从模版新建或导入已有测试项目。" },
   { step: "3", title: "编排场景", description: "编辑 JSON 步骤流，或使用产品画像导入。" },
   { step: "4", title: "运行与报告", description: "在运行中心执行测试，查看 HTML 报告与录屏。" },
@@ -51,6 +63,12 @@ export const STEPS = [
 export const REQUIREMENTS = [
   { platform: "macOS", detail: "11+，Apple Silicon (arm64) 或 Intel (x64)" },
   { platform: "Windows", detail: "10 或更高版本 (x64)" },
-  { platform: "浏览器", detail: "需安装 Google Chrome（客户端默认 channel: chrome）" },
-  { platform: "运行时", detail: "安装包已内置 Node sidecar，无需单独安装 Node" },
+  {
+    platform: "浏览器",
+    detail: "支持本机 Chrome，或由客户端一键安装 Playwright Chromium",
+  },
+  {
+    platform: "运行时",
+    detail: "安装包已内置 Node sidecar 与 Playwright 运行时，无需单独安装",
+  },
 ] as const;

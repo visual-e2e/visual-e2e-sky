@@ -100,6 +100,7 @@ export function DownloadSection() {
 
         <p className="download-note">
           macOS：打开 .dmg 后将应用拖入「应用程序」。Windows：运行 .exe 安装程序。
+          Chromium 不随安装包内置，可在客户端中按需安装或选择本机 Chrome / Chromium。
           所有版本见{" "}
           <a href={releaseUrl} target="_blank" rel="noreferrer">
             Releases 页面

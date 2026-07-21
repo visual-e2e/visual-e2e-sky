@@ -9,7 +9,7 @@ export function HeroSection() {
           <h1 className="hero__title">可视化 E2E 自动化测试工作台</h1>
           <p className="hero__desc">
             用 JSON 描述测试步骤，在可视化界面编排场景、运行测试、查看带截图与录屏的 HTML
-            报告。支持宏、规则模板、产品画像导入与多项目管理。
+            报告。支持浏览器环境配置、测试工具箱、宏与规则模板、产品画像导入及多项目管理。
           </p>
           <div className="hero__actions">
             <a href="#download" className="btn btn--primary">

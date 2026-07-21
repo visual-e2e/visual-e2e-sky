@@ -6,7 +6,9 @@ export function HowItWorks() {
       <div className="container">
         <div className="section__head">
           <h2 className="section__title">使用流程</h2>
-          <p className="section__desc">安装客户端后即可在本地完成测试编排与运行。</p>
+          <p className="section__desc">
+            安装客户端并完成浏览器配置后，即可在本地编排和运行测试。
+          </p>
         </div>
         <ol className="steps">
           {STEPS.map((item) => (
@@ -24,7 +26,7 @@ export function HowItWorks() {
           <span className="arch-diagram__arrow">→</span>
           <span>Node Sidecar</span>
           <span className="arch-diagram__arrow">→</span>
-          <span>Playwright (Chrome)</span>
+          <span>Playwright (Chrome / Chromium)</span>
           <span className="arch-diagram__arrow">→</span>
           <span>HTML 报告</span>
         </div>
