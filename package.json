@@ -11,8 +11,8 @@
     "generate:downloads": "node scripts/generate-downloads.mjs",
     "build:site": "node scripts/build-site.mjs",
     "sync:pages": "node scripts/sync-pages.mjs",
-    "release": "node scripts/release.mjs",
-    "pub": "node scripts/pub.mjs",
+    "release": "vet release",
+    "pub": "vet pub",
     "prepare": "husky"
   },
   "dependencies": {
