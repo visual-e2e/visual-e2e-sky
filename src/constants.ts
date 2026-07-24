@@ -37,7 +37,7 @@ export const FEATURES = [
   },
   {
     title: "工具箱",
-    description: "内置图片批量重命名，并支持添加、编辑和打开本地自定义工具。",
+    description: "打开应用市场安装平台工具，或添加外链工具。",
   },
   {
     title: "多项目管理",

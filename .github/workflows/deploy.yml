@@ -43,6 +43,10 @@ jobs:
           VERSION: ${{ github.event.client_payload.version || inputs.version }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/generate-downloads.mjs
+      - name: Generate tools catalog
+        run: node scripts/generate-tools.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build site
         env:
