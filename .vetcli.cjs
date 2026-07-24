@@ -8,6 +8,7 @@ module.exports = {
   releasePrefix: "release-v",
   changelog: false,
   hooks: {
-    postpublish: "npm run build:site && npm run sync:pages",
+    postpublish:
+      "npm run build:site && npm run sync:pages && npm run commit:generated",
   },
 };

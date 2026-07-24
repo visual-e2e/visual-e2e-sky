@@ -12,6 +12,7 @@
     "generate:tools": "node scripts/generate-tools.mjs",
     "build:site": "node scripts/build-site.mjs",
     "sync:pages": "node scripts/sync-pages.mjs",
+    "commit:generated": "node scripts/commit-generated.mjs",
     "release": "vet release",
     "pub": "vet pub",
     "prepare": "husky"
