@@ -1,29 +1,29 @@
 {
-  "version": "1.3.0",
-  "releasedAt": "2026-07-21T08:44:59Z",
+  "version": "1.4.0",
+  "releasedAt": "2026-07-24T04:03:20Z",
   "productRepo": "visual-e2e/visual-e2e-test",
-  "releaseUrl": "https://github.com/visual-e2e/visual-e2e-test/releases/tag/v1.3.0",
+  "releaseUrl": "https://github.com/visual-e2e/visual-e2e-test/releases/tag/v1.4.0",
   "assets": [
     {
       "id": "mac-arm64",
       "label": "macOS (Apple Silicon)",
-      "filename": "Visual.E2E.Test-1.3.0-arm64.dmg",
-      "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v1.3.0/Visual.E2E.Test-1.3.0-arm64.dmg",
-      "size": 152522101
+      "filename": "Visual.E2E.Test-1.4.0-arm64.dmg",
+      "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v1.4.0/Visual.E2E.Test-1.4.0-arm64.dmg",
+      "size": 156721081
     },
     {
       "id": "mac-x64",
       "label": "macOS (Intel)",
-      "filename": "Visual.E2E.Test-1.3.0.dmg",
-      "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v1.3.0/Visual.E2E.Test-1.3.0.dmg",
-      "size": 158739997
+      "filename": "Visual.E2E.Test-1.4.0.dmg",
+      "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v1.4.0/Visual.E2E.Test-1.4.0.dmg",
+      "size": 162975893
     },
     {
       "id": "win",
       "label": "Windows",
-      "filename": "Visual.E2E.Test.Setup.1.3.0.exe",
-      "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v1.3.0/Visual.E2E.Test.Setup.1.3.0.exe",
-      "size": 127501204
+      "filename": "Visual.E2E.Test.Setup.1.4.0.exe",
+      "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v1.4.0/Visual.E2E.Test.Setup.1.4.0.exe",
+      "size": 131950170
     }
   ]
 }
