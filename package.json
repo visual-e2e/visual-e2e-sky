@@ -1,6 +1,6 @@
 {
   "name": "visual-e2e-sky",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "generate:downloads": "node scripts/generate-downloads.mjs",
+    "generate:tools": "node scripts/generate-tools.mjs",
     "build:site": "node scripts/build-site.mjs",
     "sync:pages": "node scripts/sync-pages.mjs",
     "release": "vet release",

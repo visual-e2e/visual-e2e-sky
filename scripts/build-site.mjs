@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 生成 downloads.json 并以根路径构建站点（VITE_BASE=/）。
+ * 生成 downloads.json / tools.json 并以根路径构建站点（VITE_BASE=/）。
  */
 import { spawnSync } from "node:child_process";
 import { dirname, join } from "node:path";
@@ -21,4 +21,5 @@ function run(cmd, args, env = {}) {
 }
 
 run("node", ["scripts/generate-downloads.mjs"]);
+run("node", ["scripts/generate-tools.mjs"]);
 run("npm", ["run", "build"], { VITE_BASE: "/" });

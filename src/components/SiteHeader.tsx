@@ -4,6 +4,7 @@ const NAV = [
   { href: "#features", label: "功能" },
   { href: "#how-it-works", label: "使用流程" },
   { href: "#download", label: "下载" },
+  { href: "#tools-store", label: "应用市场" },
   { href: "#requirements", label: "系统要求" },
 ] as const;
 
