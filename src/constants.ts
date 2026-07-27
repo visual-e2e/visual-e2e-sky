@@ -72,3 +72,65 @@ export const REQUIREMENTS = [
     detail: "安装包已内置 Node sidecar 与 Playwright 运行时，无需单独安装",
   },
 ] as const;
+
+export const DEV_RPC_METHODS = [
+  {
+    method: "project.getContext",
+    capability: "project.context",
+    api: "getProjectContext()",
+    description: "获取当前项目上下文（项目 id、名称、baseUrl、scenarios 路径）。",
+  },
+  {
+    method: "project.list",
+    capability: "project.list",
+    api: "listProjects()",
+    description: "获取项目列表。",
+  },
+  {
+    method: "project.getVariables",
+    capability: "project.variables",
+    api: "getProjectVariables({ projectId? })",
+    description: "读取项目全局变量，可指定 projectId。",
+  },
+  {
+    method: "config.getSettings",
+    capability: "config.settings",
+    api: "getSettings()",
+    description: "读取全局配置 settings。",
+  },
+  {
+    method: "config.getBrowserRuntime",
+    capability: "config.browserRuntime",
+    api: "getBrowserRuntime()",
+    description: "读取浏览器运行时配置与就绪状态。",
+  },
+  {
+    method: "fs.pickFolder",
+    capability: "fs.pickFolder",
+    api: "pickFolder()",
+    description: "弹出本地目录选择器。",
+  },
+  {
+    method: "scenario.navigate",
+    capability: "scenario.navigate",
+    api: "navigateScenario({ module, scenario })",
+    description: "跳转到场景管理并定位到指定场景。",
+  },
+  {
+    method: "cache.clear",
+    capability: "cache.clear",
+    api: "cacheClear()",
+    description: "请求清理缓存（预留能力）。",
+  },
+] as const;
+
+export const DEV_RPC_NOTIFIES = [
+  {
+    notify: "project.contextChanged",
+    description: "当前项目上下文变更通知。",
+  },
+  {
+    notify: "cache.clear",
+    description: "缓存清理通知。",
+  },
+] as const;

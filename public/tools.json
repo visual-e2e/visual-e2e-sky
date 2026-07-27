@@ -23,6 +23,9 @@
         "filename": "image-rename-1.0.0.vettool.zip",
         "url": "https://github.com/visual-e2e/visual-e2e-tool-image-rename/releases/download/v1.0.0/image-rename-1.0.0.vettool.zip",
         "size": 564685
+      },
+      "author": {
+        "name": "大米"
       }
     },
     {
@@ -45,6 +48,9 @@
         "filename": "scenario-recorder-1.0.0.vettool.zip",
         "url": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/download/v1.0.0/scenario-recorder-1.0.0.vettool.zip",
         "size": 582656
+      },
+      "author": {
+        "name": "大米"
       }
     }
   ]
