@@ -4,6 +4,7 @@ import { FeatureGrid } from "../components/FeatureGrid";
 import { HowItWorks } from "../components/HowItWorks";
 import { DownloadSection } from "../components/DownloadSection";
 import { ToolsStoreSection } from "../components/ToolsStoreSection";
+import { DevCenterSection } from "../components/DevCenterSection";
 import { Requirements } from "../components/Requirements";
 import { SiteFooter } from "../components/SiteFooter";
 
@@ -17,6 +18,7 @@ export function HomePage() {
         <HowItWorks />
         <DownloadSection />
         <ToolsStoreSection />
+        <DevCenterSection />
         <Requirements />
       </main>
       <SiteFooter />
