@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 将 build:site 生成的 public 清单提交并推送到当前分支。
+ * 将已更新的 public 清单提交并推送到当前分支。
  * 仅处理 public/downloads.json、public/tools.json；无变更则跳过。
  */
 import { spawnSync } from "node:child_process";
@@ -27,12 +27,12 @@ function gitOrThrow(args, inherit = false) {
 }
 
 function dirtyManifests() {
-  const status = gitOrThrow(["status", "--porcelain", "--", ...MANIFESTS]);
-  if (!status) return [];
-  return status
-    .split("\n")
-    .map((line) => line.slice(3).trim())
+  const tracked = gitOrThrow(["diff", "--name-only", "--", ...MANIFESTS]);
+  const untracked = gitOrThrow(["ls-files", "--others", "--exclude-standard", "--", ...MANIFESTS]);
+  const files = [...tracked.split("\n"), ...untracked.split("\n")]
+    .map((line) => line.trim())
     .filter(Boolean);
+  return [...new Set(files)];
 }
 
 try {

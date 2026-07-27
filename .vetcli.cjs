@@ -9,6 +9,6 @@ module.exports = {
   changelog: false,
   hooks: {
     postpublish:
-      "npm run build:site && npm run sync:pages && npm run commit:generated",
+      "npm run build:manifests && npm run commit:generated && npm run build && npm run sync:pages",
   },
 };

@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "generate:downloads": "node scripts/generate-downloads.mjs",
     "generate:tools": "node scripts/generate-tools.mjs",
+    "build:manifests": "npm run generate:downloads && npm run generate:tools",
     "build:site": "node scripts/build-site.mjs",
     "sync:pages": "node scripts/sync-pages.mjs",
     "commit:generated": "node scripts/commit-generated.mjs",

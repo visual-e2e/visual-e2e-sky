@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-24T11:08:03.002Z",
+  "updatedAt": "2026-07-27T10:01:15.849Z",
   "catalogUrl": "tools.json",
   "tools": [
     {
@@ -16,6 +16,9 @@
       "engines": {
         "host": ">=1.4.0"
       },
+      "author": {
+        "name": "Dami"
+      },
       "version": "1.0.0",
       "releasedAt": "2026-07-24T08:49:38Z",
       "releaseUrl": "https://github.com/visual-e2e/visual-e2e-tool-image-rename/releases/tag/v1.0.0",
@@ -23,9 +26,6 @@
         "filename": "image-rename-1.0.0.vettool.zip",
         "url": "https://github.com/visual-e2e/visual-e2e-tool-image-rename/releases/download/v1.0.0/image-rename-1.0.0.vettool.zip",
         "size": 564685
-      },
-      "author": {
-        "name": "大米"
       }
     },
     {
@@ -41,6 +41,9 @@
       "engines": {
         "host": ">=1.4.0"
       },
+      "author": {
+        "name": "Dami"
+      },
       "version": "1.0.0",
       "releasedAt": "2026-07-24T08:50:28Z",
       "releaseUrl": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/tag/v1.0.0",
@@ -48,9 +51,6 @@
         "filename": "scenario-recorder-1.0.0.vettool.zip",
         "url": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/download/v1.0.0/scenario-recorder-1.0.0.vettool.zip",
         "size": 582656
-      },
-      "author": {
-        "name": "大米"
       }
     }
   ]

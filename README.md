@@ -44,6 +44,7 @@ npm run dev
 | 命令 | 用途 |
 |------|------|
 | `npm run dev` | 本地预览与开发 |
+| `npm run build:manifests` | 仅更新 `public/downloads.json` 与 `public/tools.json` |
 | `npm run build:site` | 拉取最新下载信息并构建站点 |
 | `npm run sync:pages` | 将构建结果发布到官网 |
 | `npm run release` | 准备新版本分支 |
@@ -64,10 +65,10 @@ npm run pub              # 发布版本并更新 https://visual-e2e.github.io
 `visual-e2e-test` 发布新 Release（含安装包）后，在本仓库 `master` 执行：
 
 ```bash
-npm run build:site && npm run sync:pages
+npm run build:manifests && npm run commit:generated && npm run build && npm run sync:pages
 ```
 
-会拉取最新下载链接并更新官网，无需 bump 本站版本。
+会先提交清单，再构建并更新官网，避免「已发布但清单提交失败」的不一致状态，无需 bump 本站版本。
 
 ## 相关仓库
 
