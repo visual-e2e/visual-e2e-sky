@@ -12,6 +12,7 @@ export const TOOL_REPOS = [
     category: "file",
     preferredProd: 7201,
     enginesHost: ">=1.4.0",
+    author: { name: "Dami" },
   },
   {
     id: "scenario-recorder",
@@ -22,6 +23,7 @@ export const TOOL_REPOS = [
     category: "test",
     preferredProd: 7202,
     enginesHost: ">=1.4.0",
+    author: { name: "Dami" },
   },
   {
     id: "health-scan",
@@ -32,5 +34,6 @@ export const TOOL_REPOS = [
     category: "test",
     preferredProd: 7203,
     enginesHost: ">=1.4.0",
+    author: { name: "Dami" },
   },
 ];

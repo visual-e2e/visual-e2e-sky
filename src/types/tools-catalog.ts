@@ -5,12 +5,18 @@ export type ToolCatalogPackage = {
   sha256?: string;
 };
 
+export type ToolAuthor = {
+  name: string;
+  avatar?: string;
+};
+
 export type ToolCatalogEntry = {
   id: string;
   name: string;
   description: string;
   icon?: string;
   category?: string;
+  author?: ToolAuthor;
   repo: string;
   version: string | null;
   releasedAt: string | null;

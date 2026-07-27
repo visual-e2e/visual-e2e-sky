@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { ToolCatalogEntry, ToolsCatalog } from "../types/tools-catalog";
+import type { ToolAuthor, ToolCatalogEntry, ToolsCatalog } from "../types/tools-catalog";
 import { formatBytes } from "../utils/format";
 
 const CATALOG_URL = `${import.meta.env.BASE_URL}tools.json`;
@@ -70,6 +70,36 @@ export function ToolsStoreSection() {
   );
 }
 
+function AuthorBadge({ author }: { author?: ToolAuthor }) {
+  const name = author?.name?.trim();
+  if (!name) return null;
+  const initial = name.slice(0, 1);
+  return (
+    <div className="tools-store-card__author">
+      {author?.avatar ? (
+        <img
+          className="tools-store-card__author-avatar"
+          src={author.avatar}
+          alt={name}
+          onError={(e) => {
+            const el = e.currentTarget;
+            el.style.display = "none";
+            const sibling = el.nextElementSibling as HTMLElement | null;
+            if (sibling) sibling.style.display = "flex";
+          }}
+        />
+      ) : null}
+      <span
+        className="tools-store-card__author-initial"
+        style={author?.avatar ? { display: "none" } : undefined}
+      >
+        {initial}
+      </span>
+      <span className="tools-store-card__author-name">{name}</span>
+    </div>
+  );
+}
+
 function ToolStoreCard({ tool }: { tool: ToolCatalogEntry }) {
   const version = tool.version ? `v${tool.version.replace(/^v/, "")}` : "即将上架";
   const pkg = tool.package;
@@ -86,22 +116,25 @@ function ToolStoreCard({ tool }: { tool: ToolCatalogEntry }) {
           <span>{formatBytes(pkg.size)}</span>
         </div>
       ) : null}
-      <div className="tools-store-card__actions">
-        {pkg?.url ? (
-          <a className="btn btn--primary btn--sm" href={pkg.url} download={pkg.filename}>
-            下载
+      <div className="tools-store-card__footer">
+        <div className="tools-store-card__actions">
+          {pkg?.url ? (
+            <a className="btn btn--primary btn--sm" href={pkg.url} download={pkg.filename}>
+              下载
+            </a>
+          ) : (
+            <span className="tools-store-card__muted">即将上架</span>
+          )}
+          <a
+            className="btn btn--ghost btn--sm"
+            href={tool.releaseUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            更新日志
           </a>
-        ) : (
-          <span className="tools-store-card__muted">即将上架</span>
-        )}
-        <a
-          className="btn btn--ghost btn--sm"
-          href={tool.releaseUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          更新日志
-        </a>
+        </div>
+        <AuthorBadge author={tool.author} />
       </div>
     </article>
   );

@@ -83,6 +83,7 @@ async function buildToolEntry(meta) {
     repo: meta.repo,
     ports: { preferredProd: meta.preferredProd },
     engines: { host: meta.enginesHost },
+    ...(meta.author ? { author: meta.author } : {}),
     version: null,
     releasedAt: null,
     releaseUrl: `https://github.com/${meta.repo}/releases`,
