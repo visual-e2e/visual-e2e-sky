@@ -107,6 +107,26 @@ export function DownloadSection() {
           </a>
           。
         </p>
+
+        <aside className="download-tip" aria-label="macOS 安装提示">
+          <h3 className="download-tip__title">macOS 提示：「已损坏，无法打开」怎么办？</h3>
+          <p className="download-tip__desc">
+            系统可能给应用加上隔离标记。请先卸载/删除本机已有的 Visual E2E
+            Test，再对新下载的应用执行以下命令。
+          </p>
+          <ol className="download-tip__steps">
+            <li>
+              打开「终端」，输入下面命令，
+              <strong>末尾一定要留一个空格</strong>：
+              <pre className="download-tip__code"><code>{"xattr -r -d com.apple.quarantine "}</code></pre>
+            </li>
+            <li>
+              找到 <code>Visual E2E Test.app</code>，拖进终端窗口，让系统自动补全路径。完整命令类似：
+              <pre className="download-tip__code"><code>{`xattr -r -d com.apple.quarantine /Users/你的用户名/Downloads/Visual\\ E2E\\ Test.app`}</code></pre>
+            </li>
+          </ol>
+          <p className="download-tip__desc">回车执行后再打开应用即可。</p>
+        </aside>
       </div>
     </section>
   );
