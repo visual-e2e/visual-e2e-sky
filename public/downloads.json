@@ -9,21 +9,21 @@
       "label": "macOS (Apple Silicon)",
       "filename": "Visual.E2E.Test-2.1.0-arm64.dmg",
       "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v2.1.0/Visual.E2E.Test-2.1.0-arm64.dmg",
-      "size": 145270844
+      "size": 145270588
     },
     {
       "id": "mac-x64",
       "label": "macOS (Intel)",
       "filename": "Visual.E2E.Test-2.1.0.dmg",
       "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v2.1.0/Visual.E2E.Test-2.1.0.dmg",
-      "size": 151503217
+      "size": 151504108
     },
     {
       "id": "win",
       "label": "Windows",
       "filename": "Visual.E2E.Test.Setup.2.1.0.exe",
       "url": "https://github.com/visual-e2e/visual-e2e-test/releases/download/v2.1.0/Visual.E2E.Test.Setup.2.1.0.exe",
-      "size": 120826104
+      "size": 120826103
     }
   ]
 }
