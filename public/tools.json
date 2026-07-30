@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-30T10:56:06.941Z",
+  "updatedAt": "2026-07-30T11:02:30.056Z",
   "catalogUrl": "tools.json",
   "tools": [
     {
@@ -45,11 +45,11 @@
         "name": "Dami"
       },
       "version": "1.0.1",
-      "releasedAt": "2026-07-30T10:56:02Z",
+      "releasedAt": "2026-07-30T11:01:22Z",
       "releaseUrl": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/tag/v1.0.1",
       "package": {
-        "filename": "scenario-recorder-1.0.0.vettool.zip",
-        "url": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/download/v1.0.1/scenario-recorder-1.0.0.vettool.zip",
+        "filename": "scenario-recorder-1.0.1.vettool.zip",
+        "url": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/download/v1.0.1/scenario-recorder-1.0.1.vettool.zip",
         "size": 584338
       }
     },
