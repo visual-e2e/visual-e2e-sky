@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T02:57:28.011Z",
+  "updatedAt": "2026-07-30T10:36:55.502Z",
   "catalogUrl": "tools.json",
   "tools": [
     {
@@ -44,13 +44,38 @@
       "author": {
         "name": "Dami"
       },
-      "version": "1.0.0",
-      "releasedAt": "2026-07-24T08:50:28Z",
-      "releaseUrl": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/tag/v1.0.0",
+      "version": "1.0.1",
+      "releasedAt": "2026-07-30T10:33:42Z",
+      "releaseUrl": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/tag/v1.0.1",
       "package": {
         "filename": "scenario-recorder-1.0.0.vettool.zip",
-        "url": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/download/v1.0.0/scenario-recorder-1.0.0.vettool.zip",
-        "size": 582656
+        "url": "https://github.com/visual-e2e/visual-e2e-tool-scenario-recorder/releases/download/v1.0.1/scenario-recorder-1.0.0.vettool.zip",
+        "size": 584338
+      }
+    },
+    {
+      "id": "health-scan",
+      "name": "健康扫描",
+      "description": "扫描静态资源 404、接口 5xx、页面错乱与失效点击",
+      "icon": "tool",
+      "category": "test",
+      "repo": "visual-e2e/visual-e2e-tool-health-scan",
+      "ports": {
+        "preferredProd": 7203
+      },
+      "engines": {
+        "host": ">=1.4.0"
+      },
+      "author": {
+        "name": "Dami"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-07-30T10:34:16Z",
+      "releaseUrl": "https://github.com/visual-e2e/visual-e2e-tool-health-scan/releases/tag/v1.0.0",
+      "package": {
+        "filename": "health-scan-1.0.0.vettool.zip",
+        "url": "https://github.com/visual-e2e/visual-e2e-tool-health-scan/releases/download/v1.0.0/health-scan-1.0.0.vettool.zip",
+        "size": 640300
       }
     }
   ]
